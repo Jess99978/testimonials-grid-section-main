@@ -1,0 +1,19 @@
+// primary color
+$ModerateViolet: hsl(263, 55%, 52%);
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+
+// neutral color
+$LightGray: hsl(0, 0%, 81%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+// typography
+$font-size:13px;
+$font-family: "Barlow Semi Condensed", sans-serif;
+
+body{
+    font-size: $font-size;
+    font-family: $font-family;
+    background: $LightGrayishBlue;
+}
