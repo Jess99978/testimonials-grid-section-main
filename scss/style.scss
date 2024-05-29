@@ -1,4 +1,17 @@
+// 引入自定義的變數
 @use "variables";
+// 覆蓋 bootstrap 的變數要放置在引入 bootstrap 之前
+// $primary:#7bacf4;
+// 引入 bootstrap
+// required（必要的部分）
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+// optional（需要的部分)
+@import "../node_modules/bootstrap/scss/buttons";
+
 
 body {
   font-size: variables.$font-size;
@@ -13,6 +26,7 @@ h5,
 h6,
 p {
   margin-bottom: 0px !important;
+  margin-top: 0px !important;
 }
 .testimonial {
   height: 100vh;
@@ -40,6 +54,7 @@ p {
   &__info {
     display: flex;
     flex-direction: column;
+    gap:7px;
   }
   &__name {
     &--light {
@@ -63,12 +78,12 @@ p {
   }
   &__title {
     &--light {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: variables.$title-color-light;
     }
     &--dark {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 600;
       color: variables.$title-color-dark;
     }
