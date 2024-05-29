@@ -20,6 +20,11 @@ p {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 375px) {
+  .testimonial__container {
+    height: auto;
+  }
+}
 
 .testimonial {
   max-width: 1300px;
@@ -27,6 +32,15 @@ p {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+@media (max-width: 375px) {
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-inline: 20px;
+    margin-block: 50px;
+  }
 }
 
 .testimonial__block {
@@ -120,6 +134,11 @@ p {
 
 .testimonial__block--tall {
   grid-row: span 2;
+}
+@media (max-width: 375px) {
+  .testimonial__block--tall {
+    order: 5;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
