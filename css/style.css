@@ -105,10 +105,7 @@ p {
   box-shadow: 15px 8px 10px rgba(225, 224, 224, 0.7529411765);
 }
 .testimonial__block--purple {
-  background-color: hsl(263, 55%, 52%);
-  background-image: url(../images/bg-pattern-quotation.svg);
-  background-repeat: no-repeat;
-  background-position: top right 15%;
+  background: hsl(263, 55%, 52%) url(../images/bg-pattern-quotation.svg) no-repeat top right 15%;
 }
 .testimonial__block--white {
   background: hsl(0, 0%, 100%);

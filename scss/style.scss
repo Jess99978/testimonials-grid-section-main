@@ -1,28 +1,9 @@
-// primary color
-$moderate-violet: hsl(263, 55%, 52%);
-$very-dark-grayish-blue: hsl(217, 19%, 35%);
-$very-dark-blackish-blue: hsl(219, 29%, 14%);
-$white: hsl(0, 0%, 100%);
+@use "variables";
 
-// neutral color
-$light-gray: hsl(0, 0%, 81%);
-$light-grayish-blue: hsl(210, 46%, 95%);
-
-// typography
-$font-size: 13px;
-$font-family: "Barlow Semi Condensed", sans-serif;
-$title-color-light: $white;
-$subtitle-color-light: hsl(0, 0%, 100%, 50%);
-$content-color-light: hsl(0, 0%, 100%, 70%);
-$title-color-dark: $very-dark-blackish-blue;
-$subtitle-color-dark: hsl(219, 29%, 14%, 50%);
-$content-color-dark: hsl(219, 29%, 14%, 70%);
-
-// box-shadow
 body {
-  font-size: $font-size;
-  font-family: $font-family;
-  background-color: $light-grayish-blue !important;
+  font-size: variables.$font-size;
+  font-family: variables.$font-family;
+  background-color: variables.$light-grayish-blue !important;
 }
 h1,
 h2,
@@ -48,7 +29,7 @@ p {
   &__avatar {
     width: 50px;
     height: 50px;
-    border: 3px solid $content-color-light;
+    border: 3px solid variables.$content-color-light;
     border-radius: 50%;
     img {
       width: 100%;
@@ -64,42 +45,42 @@ p {
     &--light {
       font-size: 1.3rem;
       font-weight: 500;
-      color: $title-color-light;
+      color: variables.$title-color-light;
     }
     &--dark {
       font-size: 1.3rem;
       font-weight: 500;
-      color: $title-color-dark;
+      color: variables.$title-color-dark;
     }
   }
   &__status {
     &--light {
-      color: $subtitle-color-light;
+      color: variables.$subtitle-color-light;
     }
     &--dark {
-      color: $subtitle-color-dark;
+      color: variables.$subtitle-color-dark;
     }
   }
   &__title {
     &--light {
       font-size: 1.6rem;
       font-weight: 600;
-      color: $title-color-light;
+      color: variables.$title-color-light;
     }
     &--dark {
       font-size: 1.6rem;
       font-weight: 600;
-      color: $title-color-dark;
+      color: variables.$title-color-dark;
     }
   }
   &__content {
     &--light {
       font-weight: 500;
-      color: $content-color-light;
+      color: variables.$content-color-light;
     }
     &--dark {
       font-weight: 500;
-      color: $content-color-dark;
+      color: variables.$content-color-dark;
     }
   }
 }
@@ -126,19 +107,16 @@ p {
   padding: 30px;
   box-shadow: 15px 8px 10px #e1e0e0c0;
   &--purple {
-    background-color: $moderate-violet;
-    background-image: url(../images/bg-pattern-quotation.svg);
-    background-repeat: no-repeat;
-    background-position: top right 15%;
+    background: variables.$moderate-violet url(../images/bg-pattern-quotation.svg) no-repeat top right 15%;
   }
   &--white {
-    background: $white;
+    background: variables.$white;
   }
   &--gray {
-    background: $very-dark-grayish-blue;
+    background: variables.$very-dark-grayish-blue;
   }
   &--black {
-    background: $very-dark-blackish-blue;
+    background: variables.$very-dark-blackish-blue;
   }
   &--narrow {
     grid-column: span 1;
