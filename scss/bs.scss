@@ -1,0 +1,146 @@
+// 引入自定義的變數
+@use "variables";
+
+// 引入 bootstrap
+// required（必要的部分）
+@import "../node_modules/bootstrap/scss/functions" ;
+// 覆蓋 bootstrap 的變數要放置在 functions 之後，其他項目之前
+// $primary:#7bacf4;
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+
+// optional（需要的部分)
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+
+// 原樣式（逐步用 bs 改寫）
+// 引入自定義的變數
+*{
+    box-sizing: border-box;
+}
+body {
+  font-size: variables.$font-size;
+  font-family: variables.$font-family;
+  background-color: variables.$light-grayish-blue !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+.testimonial {
+    &__container{
+        max-width: 1440px;
+        margin-inline: auto;
+    }
+    &__author{
+        display:flex;
+        gap:10px;
+    }
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border: 3px solid variables.$content-color-light;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  &__name {
+    &--light {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: variables.$title-color-light;
+    }
+    &--dark {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: variables.$title-color-dark;
+    }
+  }
+  &__status {
+    &--light {
+      color: variables.$subtitle-color-light;
+    }
+    &--dark {
+      color: variables.$subtitle-color-dark;
+    }
+  }
+  &__title {
+    &--light {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: variables.$title-color-light;
+    }
+    &--dark {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: variables.$title-color-dark;
+    }
+  }
+  &__content {
+    &--light {
+      font-weight: 500;
+      color: variables.$content-color-light;
+    }
+    &--dark {
+      font-weight: 500;
+      color: variables.$content-color-dark;
+    }
+  }
+}
+
+.testimonial__block {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap:15px;
+  box-shadow: 15px 8px 10px #e1e0e0c0;
+  &--purple {
+    background: variables.$moderate-violet
+      url(../images/bg-pattern-quotation.svg) no-repeat top right 15%;
+  }
+  &--white {
+    background: variables.$white;
+  }
+  &--gray {
+    background: variables.$very-dark-grayish-blue;
+  }
+  &--black {
+    background: variables.$very-dark-blackish-blue;
+  }
+  &--narrow {
+    grid-column: span 1;
+  }
+  &--wide {
+    grid-column: span 2;
+  }
+  &--tall {
+    grid-row: span 2;
+    @media (max-width: 768px) {
+      order: 5;
+    }
+  }
+}
+
