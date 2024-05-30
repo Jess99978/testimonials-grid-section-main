@@ -1,17 +1,5 @@
 // 引入自定義的變數
 @use "variables";
-// 覆蓋 bootstrap 的變數要放置在引入 bootstrap 之前
-// $primary:#7bacf4;
-// 引入 bootstrap
-// required（必要的部分）
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/root";
-// optional（需要的部分)
-@import "../node_modules/bootstrap/scss/buttons";
-
 
 body {
   font-size: variables.$font-size;
@@ -33,7 +21,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
+    display: block;
     height: auto;
   }
   &__author {
@@ -54,7 +43,7 @@ p {
   &__info {
     display: flex;
     flex-direction: column;
-    gap:7px;
+    gap: 7px;
   }
   &__name {
     &--light {
@@ -105,7 +94,7 @@ p {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -122,7 +111,8 @@ p {
   padding: 30px;
   box-shadow: 15px 8px 10px #e1e0e0c0;
   &--purple {
-    background: variables.$moderate-violet url(../images/bg-pattern-quotation.svg) no-repeat top right 15%;
+    background: variables.$moderate-violet
+      url(../images/bg-pattern-quotation.svg) no-repeat top right 15%;
   }
   &--white {
     background: variables.$white;
@@ -141,7 +131,7 @@ p {
   }
   &--tall {
     grid-row: span 2;
-    @media (max-width: 375px) {
+    @media (max-width: 768px) {
       order: 5;
     }
   }
