@@ -1,4 +1,4 @@
-# Responsive Web Design Project - testimonials-grid-section
+# Testimonials - Responsive Web Design Project
 
 ## 目錄
 
